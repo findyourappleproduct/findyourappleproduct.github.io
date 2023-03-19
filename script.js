@@ -1,20 +1,6 @@
-const quizForm = document.querySelector('#quiz-form');
-
-quizForm.addEventListener('submit', (event) => {
-	event.preventDefault();
-	const purpose = quizForm.elements['purpose'].value;
-	const size = quizForm.elements['size'].value;
-	const performance = quizForm.elements['performance'].value;
-	const budget = quizForm.elements['budget'].value;
-
-	const result = getResult(purpose, size, performance, budget);
-
-	// Hier können Sie das Ergebnis anzeigen, z.B. mit einer Alert-Box oder auf einer anderen Seite.
-});
-
 function getResult(purpose, size, performance, budget) {
 	let result = '';
-	
+
 	// Logik für die Auswertung des Tests
 	if (purpose === 'leisure' && size === 'small' && performance === 'basic' && budget === 'low') {
 		result = 'iPad mini';
@@ -33,6 +19,22 @@ function getResult(purpose, size, performance, budget) {
 	} else if (purpose === 'work' && size === 'large' && performance === 'high' && budget === 'high') {
 		result = 'iMac (M1)';
 	}
-	
+
 	return result;
 }
+
+const quizForm = document.querySelector('#quiz-form');
+const resultElement = document.querySelector('#result');
+
+quizForm.addEventListener('submit', (event) => {
+	event.preventDefault();
+	const purpose = quizForm.elements['purpose'].value;
+	const size = quizForm.elements['size'].value;
+	const performance = quizForm.elements['performance'].value;
+	const budget = quizForm.elements['budget'].value;
+
+	const result = getResult(purpose, size, performance, budget);
+
+	// Anzeigen des Ergebnisses
+	resultElement.textContent = 'Das passende Gerät für Sie ist: ' + result;
+});
