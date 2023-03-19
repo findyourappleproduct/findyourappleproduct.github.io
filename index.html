@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Apple-Gerät auswählen</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Welches Apple-Gerät passt am besten zu Ihnen?</h1>
+		<form id="quiz-form">
+			<div class="question">
+				<h2>Wofür möchten Sie das Gerät hauptsächlich verwenden?</h2>
+				<input type="radio" id="everyday-tasks" name="purpose" value="everyday-tasks">
+				<label for="everyday-tasks">Alltägliche Aufgaben</label><br>
+				<input type="radio" id="work" name="purpose" value="work">
+				<label for="work">Arbeit</label><br>
+				<input type="radio" id="creative-activities" name="purpose" value="creative-activities">
+				<label for="creative-activities">Kreative Tätigkeiten</label><br>
+				<input type="radio" id="gaming-entertainment" name="purpose" value="gaming-entertainment">
+				<label for="gaming-entertainment">Gaming oder Unterhaltung</label><br>
+			</div>
+			<div class="question">
+				<h2>Welche Größe sollte das Gerät haben?</h2>
+				<input type="radio" id="small" name="size" value="small">
+				<label for="small">Klein (z.B. iPad mini)</label><br>
+				<input type="radio" id="medium" name="size" value="medium">
+				<label for="medium">Mittelgroß (z.B. iPad oder MacBook Air)</label><br>
+				<input type="radio" id="large" name="size" value="large">
+				<label for="large">Groß (z.B. iMac oder MacBook Pro)</label><br>
+			</div>
+			<div class="question">
+				<h2>Wie viel Leistung benötigen Sie?</h2>
+				<input type="radio" id="basic" name="performance" value="basic">
+				<label for="basic">Grundlegende Leistung für alltägliche Aufgaben</label><br>
+				<input type="radio" id="intermediate" name="performance" value="intermediate">
+				<label for="intermediate">Mittlere Leistung für anspruchsvollere Aufgaben</label><br>
+				<input type="radio" id="high" name="performance" value="high">
+				<label for="high">Hohe Leistung für anspruchsvolle Tätigkeiten wie Gaming oder Video-Bearbeitung</label><br>
+			</div>
+			<div class="question">
+				<h2>Was ist Ihr Budget?</h2>
+				<input type="radio" id="low" name="budget" value="low">
+				<label for="low">Niedrig (unter 500€)</label><br>
+				<input type="radio" id="medium" name="budget" value="medium">
+			<label for="medium">Mittel (zwischen 500€ und 1500€)</label><br>
+			<input type="radio" id="high" name="budget" value="high">
+			<label for="high">Hoch (über 1500€)</label><br>
+		</div>
+		<div class="submit">
+			<button type="submit">Ergebnis anzeigen</button>
+		</div>
+	</form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
